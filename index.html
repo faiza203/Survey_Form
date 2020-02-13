@@ -8,14 +8,85 @@
     body{
     background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ),
     url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+    text-align: center;
+    background-attachment: fixed;
     }
+    h1{
+        padding: 40px 0 0 0;
+        color: white;
+    }
+    p{
+        color:beige;
+        font-size: 18px;
+    }
+    div{
+        margin: 30px 150px;
+        background-color: rgba(27, 27, 50, 0.8);
+    }
+    div form{
+        color: white;
+        text-align:left;
+        padding: 50px 50px 50px 50px;
+        font-size: 20px ;
+        display: flex;
+        flex-direction: column;     
+        }
+    div form button{
+        background-color: green;
+        color: #ffffff;
+        line-height: 30px;
+    }
+
     </style>
 </head>
 <body>
-    <h1></h1>
-    <p></p>
+    <h1>freeCodeCamp Survey Form</h1>
+    <p>Thank you for taking the time to help us improve the platform</p>
+    <div >
     <form>
-        
+    FIRST NAME:<br>
+    <input type="text" name="firstname"><br>
+    EMAIL:<br>
+    <input type="email" name="email"><br>
+    AGE (OPTIONAL):<br>
+    <input type="number" name="age" min="10" max="99"><br>
+    Which option best describes your current role?<br>
+    <select name="Select current role">
+        <option value="Select current role">Select current role</option>
+        <option value="Full time work">Full time work</option>
+        <option value="Job">Job</option>
+        <option value="Student">Student</option>
+        <option value="Learner">Learner</option>
+        <option value="Other">Other</option>
+    </select>
+        <p> You recommend freeCodeCamp to a friend?</p>
+        <input type="radio" name="abc" >Definately
+        <input type="radio" name="abc">May Be
+        <input type="radio" name="abc">Not Sure
+        <p>What is your favorite feature of freeCodeCamp?</p> 
+        <select name="Select an option">
+            <option disabled selected value="e">Select an option</option>
+            <option value="a">Projects</option>
+            <option value="b">Challenges</option>
+            <option value="c">Open Source</option>
+            <option value="d">Community</option>
+        <p>What would you like to see improved? (Check all that apply)</p>
+        <input type="checkbox" name="abc" >Front-end Projects 
+        <input type="checkbox" name="abc">Back-end Projects
+        <input type="checkbox" name="abc">Data Visualization
+        <input type="checkbox" name="abc">Challenges
+        <input type="checkbox" name="abc">Open Source Community
+        <input type="checkbox" name="abc">Gitter help rooms
+        <input type="checkbox" name="abc">Videos
+        <input type="checkbox" name="abc">City Meetups
+        <input type="checkbox" name="abc">Wiki
+        <input type="checkbox" name="abc">Forum
+        <input type="checkbox" name="abc">Additional Courses
+        </select>
+        <p>Any comments or suggestions?</p>
+        <textarea rows="3" placeholder="Enter your comment here..."></textarea><br>
+        <button type="submit">Submit</button>
     </form>
+</div>
 </body>
-</html>
+</html>  
