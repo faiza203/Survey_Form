@@ -19,22 +19,40 @@
         color:beige;
         font-size: 18px;
     }
-    div{
+    #mainDiv{
         margin: 30px 150px;
         background-color: rgba(27, 27, 50, 0.8);
     }
-    div form{
+    #mainDiv form #secondDiv{
         color: white;
         text-align:left;
-        padding: 50px 50px 50px 50px;
+        padding: 50px 50px 0px 50px;
         font-size: 20px ;
         display: flex;
-        flex-direction: column;     
+        flex-direction: column; 
+        column-width: auto;    
         }
-    div form button{
+    #mainDiv form #thirdDiv{
+        color: white;
+        text-align:left;
+        padding: 0px 50px 0px 50px;
+        font-size: 20px ;
+        flex-direction: column; 
+        column-width: auto;    
+    }
+    #mainDiv form #fourthDiv{
+        text-align: left;
+        padding: 0px 50px 50px 50px;
+        display:flex;
+        flex-direction:column;
+        
+        
+            }
+    #mainDiv form #fourthDiv button{
         background-color: green;
         color: #ffffff;
         line-height: 30px;
+        text-align: center;
     }
 
     </style>
@@ -42,8 +60,9 @@
 <body>
     <h1>freeCodeCamp Survey Form</h1>
     <p>Thank you for taking the time to help us improve the platform</p>
-    <div >
+    <div id="mainDiv">
     <form>
+    <div id="secondDiv">
     FIRST NAME:<br>
     <input type="text" name="firstname"><br>
     EMAIL:<br>
@@ -59,33 +78,39 @@
         <option value="Learner">Learner</option>
         <option value="Other">Other</option>
     </select>
+    </div>
+    <div id="thirdDiv">
         <p> You recommend freeCodeCamp to a friend?</p>
-        <input type="radio" name="abc" >Definately
-        <input type="radio" name="abc">May Be
-        <input type="radio" name="abc">Not Sure
+        <input type="radio" name="abc" >Definately<br>
+        <input type="radio" name="abc">May Be <br>
+        <input type="radio" name="abc">Not Sure<br>
         <p>What is your favorite feature of freeCodeCamp?</p> 
-        <select name="Select an option">
+        <select name="Select an option"><br>
             <option disabled selected value="e">Select an option</option>
             <option value="a">Projects</option>
             <option value="b">Challenges</option>
             <option value="c">Open Source</option>
             <option value="d">Community</option>
+        </select><br>
         <p>What would you like to see improved? (Check all that apply)</p>
-        <input type="checkbox" name="abc" >Front-end Projects 
-        <input type="checkbox" name="abc">Back-end Projects
-        <input type="checkbox" name="abc">Data Visualization
-        <input type="checkbox" name="abc">Challenges
-        <input type="checkbox" name="abc">Open Source Community
-        <input type="checkbox" name="abc">Gitter help rooms
-        <input type="checkbox" name="abc">Videos
-        <input type="checkbox" name="abc">City Meetups
-        <input type="checkbox" name="abc">Wiki
-        <input type="checkbox" name="abc">Forum
-        <input type="checkbox" name="abc">Additional Courses
+        <input type="checkbox" name="abc" >Front-end Projects<br> 
+        <input type="checkbox" name="abc">Back-end Projects<br>
+        <input type="checkbox" name="abc">Data Visualization<br>
+        <input type="checkbox" name="abc">Challenges<br>
+        <input type="checkbox" name="abc">Open Source Community<br>
+        <input type="checkbox" name="abc">Gitter help rooms<br>
+        <input type="checkbox" name="abc">Videos<br>
+        <input type="checkbox" name="abc">City Meetups<br>
+        <input type="checkbox" name="abc">Wiki<br>
+        <input type="checkbox" name="abc">Forum<br>
+        <input type="checkbox" name="abc">Additional Courses<br>
         </select>
-        <p>Any comments or suggestions?</p>
+    </div>
+    <div id="fourthDiv">
+        <p>Any comments or suggestions?</p><br>
         <textarea rows="3" placeholder="Enter your comment here..."></textarea><br>
         <button type="submit">Submit</button>
+    </div>
     </form>
 </div>
 </body>
