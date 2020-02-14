@@ -1,117 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form F</title>
-    <style>    
-    body{
-    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ),
-    url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
-    text-align: center;
-    background-attachment: fixed;
-    }
-    h1{
+    <style>
+      body {
+        background-image: linear-gradient(
+            115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)
+          ),
+          url("https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg");
+        text-align: center;
+        background-attachment: fixed;
+      }
+      h1 {
         padding: 40px 0 0 0;
         color: white;
-    }
-    p{
-        color:beige;
+      }
+      p {
+        color: beige;
         font-size: 18px;
-    }
-    #mainDiv{
-        margin: 30px 150px;
+      }
+      #mainDiv {
         background-color: rgba(27, 27, 50, 0.8);
-    }
-    #mainDiv form #secondDiv{
+        margin: 30px 150px;
+      }
+      #mainDiv input[type="text"],
+      #mainDiv input[type="email"],
+      #mainDiv input[type="number"] {
+        height: 35px;
+        padding: 5px 10px;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      #mainDiv input[type="radio"],
+      #mainDiv input[type="checkbox"] {
+        margin-right: 10px;
+        min-height: 1.25rem;
+        min-width: 1.25rem;
+      }
+      #mainDiv select {
+        height: 45px;
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 18px;
+      }
+      #mainDiv textarea {
+        padding: 5px 10px;
+        font-size: 18px;
+      }
+      #mainDiv form #secondDiv {
         color: white;
-        text-align:left;
+        text-align: left;
         padding: 50px 50px 0px 50px;
-        font-size: 20px ;
+        font-size: 20px;
         display: flex;
-        flex-direction: column; 
-        column-width: auto;    
-        }
-    #mainDiv form #thirdDiv{
+        flex-direction: column;
+        column-width: auto;
+      }
+      #mainDiv form #thirdDiv {
         color: white;
-        text-align:left;
+        text-align: left;
         padding: 0px 50px 0px 50px;
-        font-size: 20px ;
-        flex-direction: column; 
-        column-width: auto;    
-    }
-    #mainDiv form #fourthDiv{
+        font-size: 20px;
+        flex-direction: column;
+        column-width: auto;
+      }
+      #mainDiv form #fourthDiv {
         text-align: left;
         padding: 0px 50px 50px 50px;
-        display:flex;
-        flex-direction:column;
-        
-        
-            }
-    #mainDiv form #fourthDiv button{
-        background-color: green;
+        display: flex;
+        flex-direction: column;
+      }
+      #mainDiv form #fourthDiv button {
+        background-color: #37af65;
+        border: none;
         color: #ffffff;
         line-height: 30px;
         text-align: center;
-    }
+        height: 50px;
+        padding: 5px 10px;
+        font-size: 18px;
+      }
 
+      .roundBorder {
+        border-radius: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>freeCodeCamp Survey Form</h1>
-    <p>Thank you for taking the time to help us improve the platform</p>
-    <div id="mainDiv">
-    <form>
-    <div id="secondDiv">
-    FIRST NAME:<br>
-    <input type="text" name="firstname"><br>
-    EMAIL:<br>
-    <input type="email" name="email"><br>
-    AGE (OPTIONAL):<br>
-    <input type="number" name="age" min="10" max="99"><br>
-    Which option best describes your current role?<br>
-    <select name="Select current role">
-        <option value="Select current role">Select current role</option>
-        <option value="Full time work">Full time work</option>
-        <option value="Job">Job</option>
-        <option value="Student">Student</option>
-        <option value="Learner">Learner</option>
-        <option value="Other">Other</option>
-    </select>
-    </div>
-    <div id="thirdDiv">
-        <p> You recommend freeCodeCamp to a friend?</p>
-        <input type="radio" name="abc" >Definately<br>
-        <input type="radio" name="abc">May Be <br>
-        <input type="radio" name="abc">Not Sure<br>
-        <p>What is your favorite feature of freeCodeCamp?</p> 
-        <select name="Select an option"><br>
+    <p style="font-style:italic;">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <div id="mainDiv" class="roundBorder">
+      <form>
+        <div id="secondDiv">
+          FIRST NAME:<br />
+          <input
+            type="text"
+            name="firstname"
+            class="roundBorder"
+            placeholder="Enter your name"
+          /><br />
+          EMAIL:<br />
+          <input type="email" name="email" class="roundBorder"  placeholder="Enter your email"/><br />
+          AGE (OPTIONAL):<br />
+          <input
+            type="number"
+            name="age"
+            min="10"
+            max="99"
+            class="roundBorder"
+            placeholder="Enter your age"
+          /><br />
+          Which option best describes your current role?<br />
+          <select name="Select current role" class="roundBorder">
+            <option value="Select current role">Select current role</option>
+            <option value="Full time work">Full time work</option>
+            <option value="Job">Job</option>
+            <option value="Student">Student</option>
+            <option value="Learner">Learner</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div id="thirdDiv">
+          <p>You recommend freeCodeCamp to a friend?</p>
+          <input type="radio" name="abc" class="roundBorder" />Definately<br />
+          <input type="radio" name="abc" class="roundBorder" />May Be <br />
+          <input type="radio" name="abc" class="roundBorder" />Not Sure<br />
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select class="roundBorder" name="Select an option">
             <option disabled selected value="e">Select an option</option>
             <option value="a">Projects</option>
             <option value="b">Challenges</option>
             <option value="c">Open Source</option>
             <option value="d">Community</option>
-        </select><br>
-        <p>What would you like to see improved? (Check all that apply)</p>
-        <input type="checkbox" name="abc" >Front-end Projects<br> 
-        <input type="checkbox" name="abc">Back-end Projects<br>
-        <input type="checkbox" name="abc">Data Visualization<br>
-        <input type="checkbox" name="abc">Challenges<br>
-        <input type="checkbox" name="abc">Open Source Community<br>
-        <input type="checkbox" name="abc">Gitter help rooms<br>
-        <input type="checkbox" name="abc">Videos<br>
-        <input type="checkbox" name="abc">City Meetups<br>
-        <input type="checkbox" name="abc">Wiki<br>
-        <input type="checkbox" name="abc">Forum<br>
-        <input type="checkbox" name="ac">Additional Courses<br>
-        </select>
+          </select>
+          <p>What would you like to see improved? (Check all that apply)</p>
+          <input type="checkbox" name="abc" />Front-end Projects<br />
+          <input type="checkbox" name="abc" />Back-end Projects<br />
+          <input type="checkbox" name="abc" />Data Visualization<br />
+          <input type="checkbox" name="abc" />Challenges<br />
+          <input type="checkbox" name="abc" />Open Source Community<br />
+          <input type="checkbox" name="abc" />Gitter help rooms<br />
+          <input type="checkbox" name="abc" />Videos<br />
+          <input type="checkbox" name="abc" />City Meetups<br />
+          <input type="checkbox" name="abc" />Wiki<br />
+          <input type="checkbox" name="abc" />Forum<br />
+          <input type="checkbox" name="abc" />Additional Courses<br />
+        </div>
+        <div id="fourthDiv">
+          <p>Any comments or suggestions?</p>
+          <br />
+          <textarea
+            rows="7"
+            class="roundBorder"
+            cols="4"
+            placeholder="Enter your comment here..."
+          ></textarea
+          ><br />
+          <button type="submit" class="roundBorder">Submit</button>
+        </div>
+      </form>
     </div>
-    <div id="fourthDiv">
-        <p>Any comments or suggestions?</p><br>
-        <textarea rows="3" placeholder="Enter your comment here..."></textarea><br>
-        <button type="submit">Submit</button>
-    </div>
-    </form>
-</div>
-</body>
-</html>  
+  </body>
+</html>
